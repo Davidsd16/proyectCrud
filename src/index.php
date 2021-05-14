@@ -2,6 +2,6 @@
 
 namespace App;
 
-use App\controllers\MeetingController;
+use App\Controllers\MeetingController;
 
 $controller = new MeetingController();

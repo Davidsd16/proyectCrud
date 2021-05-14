@@ -1,7 +1,7 @@
 <?php
-//require_once("../vendor/autoload.php");
 
-namespace App\models;
+namespace App\Models;
+
 use App\Connection;
 use PDO;
 
