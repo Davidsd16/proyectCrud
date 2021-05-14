@@ -1,4 +1,5 @@
 <?php
+
     include 'connection.php';
     $connection = new Connection();
     
@@ -20,7 +21,7 @@
 </head>
 <body>
 
-<div style="display=block">
+<div style="display:block">
     <table>
         <tr>
             <th>Coder</th>
