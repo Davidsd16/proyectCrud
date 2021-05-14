@@ -1,6 +1,7 @@
 <?php
 
-namespace App\controllers;
+namespace App\Controllers;
+
 use App\models\Meeting;
 use App\Connection;
 
@@ -29,6 +30,39 @@ class MeetingController
         }
 
         $this->index();
+    }
+
+    public function index()
+    {
+        $meeting = new Meeting();
+        $meetingList = $meeting->getMeeting();
+        $result = $meetingList;
+        require_once 'src/views/MeetingList.php';
+    }
+
+    public function create()
+    {
+        
+    }
+
+    public function store()
+    {
+        
+    }
+
+    public function edit()
+    {
+        
+    }
+
+    public function update()
+    {
+        
+    }
+
+    public function delete()
+    {
+        
     }
 }
 
