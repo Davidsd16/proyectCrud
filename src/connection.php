@@ -1,5 +1,7 @@
 <?php
-
+namespace App;
+use PDO;
+use PDOException;
 class Connection{
     
     private $host = "localhost";
@@ -10,11 +12,12 @@ class Connection{
 
     public function __construct(){
         $connectionString = "mysql:hos=".$this->host.";dbname=".$this->database.";charset=utf8";
-        try{
+        try {
             $this->connect = new PDO($connectionString,$this->user,$this->password);
             $this->connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (Exception $e){
-            $this->connect = 'Error de conexion';
+            echo 'Connected';
+        } catch (PDOException $e){
+            $this->connect = 'Error de conexión';
             echo "ERROR:".$e->getMessage();
         }
     }
@@ -23,7 +26,5 @@ class Connection{
         return $this->connect;
     }
 }
-
-
 
 ?>

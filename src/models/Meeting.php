@@ -1,7 +1,11 @@
 <?php
-require_once("../vendor/autoload.php");
+//require_once("../vendor/autoload.php");
 
-class Meeting extends Connection{
+namespace App\models;
+use App\Connection;
+use PDO;
+
+class Meeting {
     private $coder;
     private $topic;
     private $mytime;

@@ -1,4 +1,5 @@
 <?php
+
     include 'connection.php';
     $connection = new Connection();
     
@@ -19,6 +20,8 @@
     <title>Meeting Lista</title>
 </head>
 <body>
+
+<div style="display:block">
     <table>
         <tr>
             <th>Coder</th>
@@ -27,7 +30,6 @@
         </tr>
         <tr>
             <?php foreach($result as $data): ?>
-            <div style="display=block">
                 <td>
                     <?php echo $data['coder'] ?>
                 </td>
@@ -40,13 +42,13 @@
                     <?php echo $data['mytime'] ?>
 
                 </td>
-            </div>
+            
 
             <?php endforeach ?>
         </tr>
 
     </table>
 
-    
+</div>
 </body>
 </html>
