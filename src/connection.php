@@ -1,5 +1,7 @@
 <?php
-
+namespace App;
+use PDO;
+use PDOException;
 class Connection{
     
     private $host = "localhost";
@@ -13,7 +15,7 @@ class Connection{
         try{
             $this->connect = new PDO($connectionString,$this->user,$this->password);
             $this->connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (Exception $e){
+        } catch (PDOException $e){
             $this->connect = 'Error de conexion';
             echo "ERROR:".$e->getMessage();
         }
