@@ -1,5 +1,5 @@
 <?php
-require_once("../vendor/autoload.php");
+
 
 namespace App\models;
 use App\Connection;
