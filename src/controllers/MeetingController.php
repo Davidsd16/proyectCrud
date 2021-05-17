@@ -35,7 +35,7 @@ class MeetingController
     public function index()
     {
         $meeting = new Meeting();
-        $meetingList = $meeting->getMeeting();
+        $meetingList = $meeting->getList();
         $result = $meetingList;
         require_once 'src/views/MeetingList.php';
     }

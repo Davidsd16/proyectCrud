@@ -18,7 +18,7 @@ class Meeting {
         $this->connection = $this->connection->connect();
     }
 
-    public function insertMeeting($coder, $topic, $mytime) 
+    public function insert($coder, $topic, $mytime) 
     {
         $this->coder = $coder;
         $this->topic = $topic;
@@ -33,7 +33,7 @@ class Meeting {
     
     }
 
-    public function getMeeting()
+    public function getList()
     {
         $sql = "SELECT * FROM meeting";
         $execute = $this->connection->query($sql);
@@ -41,7 +41,7 @@ class Meeting {
         return $request;
     }
 
-    public function updateMeeting($id, $coder, $topic, $mytime)
+    public function update($id, $coder, $topic, $mytime)
     {
         $this->coder = $coder;
         $this->topic = $topic;
@@ -53,7 +53,7 @@ class Meeting {
         return $resultExecute;
     }
 
-    public function getMeet($id)
+    public function getById($id)
     {
         $sql = "SELECT * FROM meeting WHERE id = ?";
         $arrayWhere = array($id);
@@ -62,7 +62,7 @@ class Meeting {
         return $request;
     } 
 
-    public function deleteMeeting($id)
+    public function delete($id)
     {
         
         $sql = "DELETE FROM meeting WHERE id=?";
